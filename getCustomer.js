@@ -1,7 +1,7 @@
 async function fetchData() {
     try {
         // Replace 'YOUR_API_GATEWAY_ENDPOINT' with the actual API Gateway endpoint URL
-        const response = await fetch('https://9o20ut98jj.execute-api.us-east-2.amazonaws.com/dev');
+        const response = await fetch('https://9o20ut98jj.execute-api.us-east-2.amazonaws.com/dev/getCustomers');
         const data = await response.json();
 
         const customerList = document.getElementById('customerList');
