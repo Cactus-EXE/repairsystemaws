@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
@@ -11,6 +12,7 @@
     <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="InsideTicketStyles.css">
 </head>
+
 <body>
     <!-- Header with navigation links -->
     <header>
@@ -30,7 +32,7 @@
     <div class="container">
         <!-- Title for creating a ticket -->
         <h1>Create Ticket</h1>
-        
+
         <!-- Form for ticket creation -->
         <form id="ticketForm" action="ticketsubmit.php" method="post">
             <!-- Input field for ticket name -->
@@ -47,7 +49,7 @@
             <label for="technicianId">Technician ID:</label>
             <input type="text" id="technicianId" name="technicianId" required>
 
-            
+
             <!-- Dropdown for choosing device type -->
             <label for="deviceType">Choose a Device Type:</label>
             <select name="deviceType" id="deviceType">
@@ -60,7 +62,7 @@
                 <option value="Computer">Computer</option>
                 <option value="Watch">Watch</option>
                 <option value="Other">Other</option>
-                <!-- Add more options for other device types -->    
+                <!-- Add more options for other device types -->
             </select>
 
 
@@ -80,9 +82,9 @@
             <label for="issueDescription">Issue Description:</label>
             <textarea id="issueDescription" name="issueDescription" required></textarea>
 
-             <!-- Input field for IMEI/Serial Number -->
-             <label for="imeiSerial">IMEI/Serial Number:</label>
-             <input type="text" id="imeiSerial" name="imeiSerial"> 
+            <!-- Input field for IMEI/Serial Number -->
+            <label for="imeiSerial">IMEI/Serial Number:</label>
+            <input type="text" id="imeiSerial" name="imeiSerial">
 
             <!-- Input field for device passcode -->
             <label for="passcode">Passcode:</label>
@@ -95,7 +97,7 @@
             <!-- Input field for contact information -->
             <label for="contactInfo">Contact Information:</label>
             <input type="text" id="contactInfo" name="contactInfo">
-            
+
             <!-- Dropdown for selecting phone carrier -->
             <label for="phoneCarrier">Phone Carrier:</label>
             <select name="phoneCarrier" id="phoneCarrier">
@@ -153,4 +155,5 @@
     <script src="InsideTicket.js"></script>
     <script src="submitTicket.js"></script>
 </body>
+
 </html>
