@@ -1,0 +1,32 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "username": "root",
+      "password": "root",
+      "database": "Shopkeeper",
+      "name": "shopkeepertester"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "193.203.166.100",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "hostingertest",
+      "username": "u416682506_loganpostroot",
+      "database": "u416682506_shopkeepertest",
+      "password": "BajaBlast3!"
+    }
+  ]
+}

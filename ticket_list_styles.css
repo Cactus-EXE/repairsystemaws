@@ -1,0 +1,162 @@
+/* Global styles */
+/* ... (existing styles) ... */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+label {
+    display: flex;
+    align-items: center; /* Center vertically */
+    margin: 10px 0;
+}
+
+select, input[type="text"], textarea {
+    width: 98%; /* Set width slightly smaller than 100% */
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+/* Split checkboxes into two columns */
+.checkbox-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adjust the gap between checkboxes */
+}
+
+.checkbox-column label {
+    flex: 1;
+    display: block;
+}
+
+.checkbox-column label input[type="checkbox"] {
+    flex: none;
+    margin-right: 5px; /* Adjust the space between checkbox and label */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* header styles*/
+
+/* styles.css */
+
+/* Reset default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* Style the navigation links */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Global styles */
+/* ... (existing styles) ... */
+
+/* Ticket List page specific styles */
+/* Add styles for the Ticket List page here */
+#ticketList {
+    display: grid;
+    gap: 10px; /* Spacing between tickets */
+    list-style: none;
+    padding: 0;
+}
+
+.ticketHeaders {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 10px; /* Spacing between columns */
+    padding: 10px;
+    background-color: #333; /* Header background color */
+    color: #fff; /* Header text color */
+    text-align: center; /* Center header text */
+}
+
+.ticketHeader {
+    font-weight: bold;
+}
+
+.ticketInfo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 10px; /* Spacing between columns */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center; /* Center ticket info */
+}
+
+/* Style individual ticket details */
+.ticketInfo > * {
+    margin: 0;
+    padding: 5px;
+}
+
+/* Header styles */
+.ticketHeader {
+    font-weight: bold;
+}
+#ticketList a {
+    text-decoration: none;
+    color: inherit; /* Use the default color */
+}
+
+#ticketList a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+#ticketList a:visited {
+    color: inherit; /* Use the default color for visited links */
+}

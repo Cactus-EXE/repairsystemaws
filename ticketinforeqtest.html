@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Information</title>
+  <script src="ticketinforequesttest.js" defer></script>
+</head>
+<body>
+
+  <h1>Ticket Information</h1>
+
+  <div id="ticketInfo">
+    <!-- Ticket information will be displayed here -->
+  </div>
+
+  <script>
+    const ticketId = 1; // Replace with the actual ticket ID you want to display
+    const url = `fetch_ticket_data.php?ticketId=${ticketId}`;
+
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(ticketData => {ticketinforeqtest.html
+        const ticketInfoDiv = document.getElementById('ticketInfo');
+        ticketInfoDiv.innerHTML = `
+          <p><strong>Ticket ID:</strong> ${ticketData.TicketID}</p>
+          <p><strong>Name:</strong> ${ticketData.Name}</p>
+          <p><strong>Device Type:</strong> ${ticketData.DeviceType}</p>
+          <p><strong>Device Make:</strong> ${ticketData.DeviceMake}</p>
+          <p><strong>Device Model:</strong> ${ticketData.DeviceModel}</p>
+          <p><strong>Issue Description:</strong> ${ticketData.IssueDescription}</p>
+          <!-- Add more fields as needed -->
+        `;
+      })
+      .catch(error => {
+        console.error('Error fetching ticket data:', error);
+      });
+  </script>
+
+</body>
+</html>

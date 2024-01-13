@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket List</title>
+    <link rel="stylesheet" href="ticket_list_styles.css"> <!-- Include your CSS file here -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="customer_database.html">Customer Database</a></li>
+                <li><a href="customer_details.html">Customer Database</a></li>
+                <li><a href="phone_repair.html">Phone Repair System</a></li>
+                <li><a href="ticket_list.html">Ticket List</a></li>
+                <li><a href="InsideTicket.html">Create Ticket</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button id="sortByNameBtn">Sort by Name</button>
+    <button id="sortByDateBtn">Sort by Date Submitted</button>
+
+    <div class="container">
+        <h1>Ticket List</h1>
+
+        <div class="ticketHeaders">
+            <span class="ticketHeader">Name</span>
+            <span class="ticketHeader">Device Type</span>
+            <span class="ticketHeader">Make</span>
+            <span class="ticketHeader">Model</span>
+        </div>
+
+        <ul id="ticketList"></ul> <!-- This is where the tickets will be displayed -->
+    </div>
+
+    <script src="ticket_list.js"></script> <!-- Include your JavaScript file here -->
+</body>
+</html>
