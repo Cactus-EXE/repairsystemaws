@@ -33,7 +33,15 @@
         <h1>Create Ticket</h1>
         
         <!-- Form for ticket creation -->
-        <form id="ticketForm" action="ticketsubmit.php" method="post">
+        <form>
+
+            <label>First Name :</label>
+            <input type="text" id="fName">
+            <label>Last Name :</label>
+            <input type="text" id="lName">
+
+
+
             <!-- Input field for ticket name -->
             <label for="ticket_name">Ticket Name:</label>
             <input type="text" id="ticket_name" name="ticket_name" required>
@@ -115,43 +123,19 @@
             <!-- Container for device functions checkboxes -->
             <div id="deviceFunctionsContainer"></div>
 
-            <!-- Button to submit the ticket -->
-            <button type="submit">Submit Ticket</button>
+ <!-- set button onClick method to call function we defined passing input values as parameters -->
+ <button type="button" onclick="callAPI()">Submit</button>
         </form>
-        <script>
-            // Your JavaScript code for handling ticket submission and table insertion goes here
-            // ...
-
-            // Function to display tickets from local storage on the ticket table
-            function displayTicketsInTable() {
-                const ticketTable = document.getElementById('ticketTable');
-                ticketTable.innerHTML = ''; // Clear existing table content
-
-                // Loop through local storage items and display tickets in a table format
-                for (let i = 0; i < localStorage.length; i++) {
-                    const key = localStorage.key(i);
-                    if (key.startsWith('ticket_')) { // Check if the item is a ticket
-                        const ticketData = JSON.parse(localStorage.getItem(key));
-                        const row = ticketTable.insertRow(-1); // Insert a row at the end of the table
-
-                        // Insert cells into the row
-                        const cellName = row.insertCell(0);
-                        cellName.textContent = ticketData.name;
-
-                        // Insert more cells for other ticket data as needed
-                        // ...
-                    }
-                }
-            }
-
-            // Call the function to display tickets in the table when the page loads
-            displayTicketsInTable();
-        </script>
+       
     </div>
     </div>
+
+</div>
+<!-- Display output here -->
+<div id="output"></div>
+
 
     <!-- Script tag to include JavaScript file -->
     <script src="InsideTicket.js"></script>
-    <script src="submitTicket.js"></script>
 </body>
 </html>

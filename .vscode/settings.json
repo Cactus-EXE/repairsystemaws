@@ -28,5 +28,6 @@
       "database": "u416682506_shopkeepertest",
       "password": "BajaBlast3!"
     }
-  ]
+  ],
+  "liveServer.settings.port": 5501
 }

@@ -361,3 +361,71 @@ displayTicketsInTable();
 }
 );
 
+
+
+
+
+
+
+  // define the callAPI function that takes input fields as parameters
+  var callAPI = () => {
+    // instantiate a headers object
+    var myHeaders = new Headers();
+    // add content type header to object
+    myHeaders.append("Content-Type", "application/json");
+
+    // get input values
+    var firstName = document.getElementById('fName').value;
+    var lastName = document.getElementById('lName').value;
+    var ticketName = document.getElementById('ticket_name').value;
+    var deviceMake = document.getElementById('deviceMake').value;
+    var deviceModel = document.getElementById('deviceModel').value;
+    var customerId = document.getElementById('customerId').value;
+    var technicianId = document.getElementById('technicianId').value;
+    var deviceType = document.getElementById('deviceType').value;
+    var issueDescription = document.getElementById('issueDescription').value;
+    var imeiSerial = document.getElementById('imeiSerial').value;
+    var passcode = document.getElementById('passcode').value;
+    var expectedCompletion = document.getElementById('expectedCompletion').value;
+    var contactInfo = document.getElementById('contactInfo').value;
+    var phoneCarrier = document.getElementById('phoneCarrier').value;
+
+    // Get content from deviceFunctionsContainer if it's a div container
+    var deviceFunctionsContainer = document.getElementById('deviceFunctionsContainer').innerHTML;
+
+    // using built-in JSON utility package, turn object to string and store in a variable
+    var raw = JSON.stringify({
+        "firstName": firstName,
+        "lastName": lastName,
+        "ticket_name": ticketName,
+        "deviceMake": deviceMake,
+        "deviceModel": deviceModel,
+        "customerId": customerId,
+        "technicianId": technicianId,
+        "deviceType": deviceType,
+        "issueDescription": issueDescription,
+        "imeiSerial": imeiSerial,
+        "passcode": passcode,
+        "expectedCompletion": expectedCompletion,
+        "contactInfo": contactInfo,
+        "phoneCarrier": phoneCarrier,
+        "deviceFunctionsContainer": deviceFunctionsContainer
+    });
+
+    // create a JSON object with parameters for API call and store in a variable
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    // make API call with parameters and use promises to get response
+    fetch("https://5ji1fvxlsl.execute-api.us-east-2.amazonaws.com/dev", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+            // update HTML content with the API response
+            document.getElementById('output').innerHTML = "Hello, " + JSON.parse(result).body;
+        })
+        .catch(error => console.log('error', error));
+}
